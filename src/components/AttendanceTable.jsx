@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-
+import "./AttendanceTable.css";
 const AttendanceTable = () => {
   const [students, setStudents] = useState([
     { id: 1, name: "John Doe", present: false, absent: false },
+    { id: 2, name: "Jane Smith", present: false, absent: false },
+    { id: 2, name: "Jane Smith", present: false, absent: false },
+    { id: 2, name: "Jane Smith", present: false, absent: false },
+    { id: 2, name: "Jane Smith", present: false, absent: false },
+    { id: 2, name: "Jane Smith", present: false, absent: false },
     { id: 2, name: "Jane Smith", present: false, absent: false },
     // Add more students here if needed
   ]);
@@ -16,9 +21,10 @@ const AttendanceTable = () => {
   return (
     <div>
       <h1>Attendance Table</h1>
+
       <table>
       <thead>
-        <tr>
+        <tr >
           <th>Student ID</th>
           <th>Student Name</th>
           <th>Present</th>
@@ -28,26 +34,28 @@ const AttendanceTable = () => {
       <tbody>
         {students.map((student, index) => (
           <tr key={student.id}>
-            <td>{student.id}</td>
+                  <td>{student.id}</td>
             <td>{student.name}</td>
-            <td>
+            <td>Present
               <input
                 type="checkbox"
                 checked={student.present}
                 onChange={() => handleAttendanceChange(index, "present")}
-              />
+              /> 
             </td>
-            <td>
+            <td>Absent
               <input
                 type="checkbox"
                 checked={student.absent}
                 onChange={() => handleAttendanceChange(index, "absent")}
-              />
+              /> 
             </td>
           </tr>
         ))}
       </tbody>
-    </table></div>
+    </table>
+
+    </div>
     
   );
 };
