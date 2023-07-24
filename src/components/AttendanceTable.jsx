@@ -4,14 +4,9 @@ const AttendanceTable = () => {
   const [students, setStudents] = useState([
     { id: 1, name: "John Doe", present: false, absent: false },
     { id: 2, name: "Jane Smith", present: false, absent: false },
-    { id: 2, name: "Jane Smith", present: false, absent: false },
-    { id: 2, name: "Jane Smith", present: false, absent: false },
-    { id: 2, name: "Jane Smith", present: false, absent: false },
-    { id: 2, name: "Jane Smith", present: false, absent: false },
-    { id: 2, name: "Jane Smith", present: false, absent: false },
+    { id: 3, name: "Jane Smith", present: false, absent: false },
     // Add more students here if needed
   ]);
-
   const handleAttendanceChange = (index, field) => {
     const updatedStudents = [...students];
     updatedStudents[index][field] = !updatedStudents[index][field];
@@ -21,7 +16,6 @@ const AttendanceTable = () => {
   return (
     <div>
       <h1>Attendance Table</h1>
-
       <table>
       <thead>
         <tr >
@@ -31,7 +25,7 @@ const AttendanceTable = () => {
           <th>Absent</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody> 
         {students.map((student, index) => (
           <tr key={student.id}>
                   <td>{student.id}</td>
@@ -54,7 +48,6 @@ const AttendanceTable = () => {
         ))}
       </tbody>
     </table>
-
     </div>
     
   );
