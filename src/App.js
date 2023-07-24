@@ -1,5 +1,6 @@
 import './App.css';
 import AttendanceTable from './components/AttendanceTable';
+import Hello from './components/Hello';
 
 
 
@@ -7,6 +8,7 @@ import AttendanceTable from './components/AttendanceTable';
 function App() {
   return (
     <div className="App">
+      <Hello/>
       <AttendanceTable/>
     </div>
   );
