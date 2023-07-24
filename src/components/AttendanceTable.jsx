@@ -28,21 +28,21 @@ const AttendanceTable = () => {
       <tbody> 
         {students.map((student, index) => (
           <tr key={student.id}>
-                  <td>{student.id}</td>
+            <td>{student.id}</td>
             <td>{student.name}</td>
-            <td>Present
+            <td> 
               <input
                 type="checkbox"
                 checked={student.present}
                 onChange={() => handleAttendanceChange(index, "present")}
-              /> 
+              /> <span className="present">Present</span>
             </td>
-            <td>Absent
+            <td>
               <input
                 type="checkbox"
                 checked={student.absent}
                 onChange={() => handleAttendanceChange(index, "absent")}
-              /> 
+              />  <span className="absent">Absent</span> 
             </td>
           </tr>
         ))}
