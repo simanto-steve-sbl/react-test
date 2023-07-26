@@ -1,0 +1,39 @@
+.teacher-info-form-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .teacher-info-form label,
+  .teacher-info-form input,
+  .teacher-info-form button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .teacher-info-form input {
+    width: 500px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .teacher-info-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .teacher-info-form button:hover {
+    background-color: #0056b3;
+  }
+  

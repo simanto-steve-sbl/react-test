@@ -1,6 +1,6 @@
 import './App.css';
 import AttendanceTable from './components/AttendanceTable';
-import Hello from './components/Hello';
+import TeacherInfoForm from './components/TeacherInfoForm';
 
 
 
@@ -8,8 +8,8 @@ import Hello from './components/Hello';
 function App() {
   return (
     <div className="App">
-      <Hello/>
       <AttendanceTable/>
+      <TeacherInfoForm/>
     </div>
   );
 }
